@@ -6,4 +6,11 @@ Rake::TestTask.new do |t|
   t.verbose = true
 end
 
+task :sass do
+  scss_files = FileList['sass/*.scss']
+  scss_files.each do |file|
+    `sass #{file}:public/css/#{file[5..-5]}css`
+  end
+end
+
 task :default => ["test"]
