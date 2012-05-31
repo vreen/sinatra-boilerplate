@@ -49,7 +49,8 @@ namespace :update do
   end
 
   task :all do
-
+    Rake::Task["update:jquery"].invoke
+    Rake::Task["update:bootstrap"].invoke
   end
 end
 
