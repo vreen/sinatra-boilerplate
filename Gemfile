@@ -8,6 +8,7 @@ gem 'sinatra-static-assets', '1.0.3'
 group :development do
   gem 'dm-sqlite-adapter', '1.2.0'
   gem 'sass'
+  gem 'rubyzip'
 end
 
 #If you plan on deploying to Heroku, uncomment this group
