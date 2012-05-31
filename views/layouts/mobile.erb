@@ -1,11 +1,11 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-		<title>Sinatra Quickstart</title>
+		<title><%= render_partial :title %></title>
 		<meta charset="utf-8"> 
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <%= javascript_script_tag "js/jquery.js" %>
 		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
 	</head> 
 	
@@ -13,7 +13,7 @@
 	
 		<div data-role="page"> 
 			<div data-role="header">
-				<h1>Sinatra Quickstart</h1>
+				<h1>Sinatra Boilerplate</h1>
 			</div> 
 			
 			<div data-role="content">
