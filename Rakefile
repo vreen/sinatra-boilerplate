@@ -7,9 +7,11 @@ Rake::TestTask.new do |t|
 end
 
 task :sass do
+  puts "Compiling and minifying .scss files in sass/"
   scss_files = FileList['sass/*.scss']
   scss_files.each do |file|
-    `sass #{file}:public/css/#{file[5..-5]}css`
+    puts "Processing: #{file}"
+    `sass #{file}:public/css/#{file[5..-5]}css --style compressed`
   end
 end
 
