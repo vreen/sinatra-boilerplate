@@ -9,6 +9,7 @@ Rake::TestTask.new do |t|
   t.verbose = true
 end
 
+desc "Compiles all .scss files in the sass directory and places them in public/css (minified)"
 task :sass do
   puts "Compiling and minifying .scss files in sass/"
   scss_files = FileList['sass/*.scss']
@@ -19,6 +20,7 @@ task :sass do
 end
 
 namespace :update do
+  desc "Download the latest version of JQuery (minified)"
   task :jquery do
     open('jquery.js', 'wb') do |file|
       file << open('http://code.jquery.com/jquery-latest.min.js').read
@@ -27,6 +29,7 @@ namespace :update do
     puts "Downloaded the latest JQuery"
   end
 
+  desc "Download the latest version of Twitter Bootstrap (minified)"
   task :bootstrap do
     open('bootstrap.zip', 'wb') do |file|
       file << open('http://twitter.github.com/bootstrap/assets/bootstrap.zip').read
@@ -48,6 +51,7 @@ namespace :update do
     puts "Downloaded the latest Twitter Bootstrap"
   end
 
+  desc "Downloads the most recent versions of JQuery & Twitter Bootstrap"
   task :all do
     Rake::Task["update:jquery"].invoke
     Rake::Task["update:bootstrap"].invoke
