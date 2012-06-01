@@ -58,4 +58,25 @@ namespace :update do
   end
 end
 
+namespace :remove do
+  desc "Remove JQuery from the project"
+  task :jquery do
+    FileUtils.rm('./public/js/jquery.js')
+  end
+
+  desc "Remove Twitter Bootstrap from the project"
+  task :bootstrap do
+    FileUtils.rm('./public/css/bootstrap.min.css')
+    FileUtils.rm('./public/img/glyphicons-halflings-white.png')
+    FileUtils.rm('./public/img/glyphicons-halflings.png')
+    FileUtils.rm('./public/js/bootstrap.min.js')
+  end
+
+  desc "Remove both JQuery & Twitter Bootstrap from the project"
+  task :all do
+    Rake::Task["remove:jquery"].invoke
+    Rake::Task["remove:bootstrap"].invoke
+  end
+end
+
 task :default => ["test"]
