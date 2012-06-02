@@ -4,6 +4,10 @@ Sinatra Boilerplate is a lightweight project skeleton for getting a Sinatra proj
 
 Once you have cloned the project onto your machine, run:
 
+    bundle install
+
+And then:
+
     rake --tasks
 
 This will show you some helpful tasks that Sinatra Boilerplate provides. 
