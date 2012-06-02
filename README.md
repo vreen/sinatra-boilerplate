@@ -1,5 +1,35 @@
-Sinatra Boilerplate
-===================
+# Sinatra Boilerplate
 
-A basic boilerplate project structure to quickly get up and running with Sinatra, JQuery, JQueryMobile & Twitter Bootstrap.
-Once you've grabbed the boilerplate code, run the application and in your browser go to localhost:4567 for more details.
+Sinatra Boilerplate is a lightweight project skeleton for getting a Sinatra project up and running as quickly as possible.
+
+Once you have cloned the project onto your machine, run:
+
+    rake --tasks
+
+This will show you some helpful tasks that Sinatra Boilerplate provides. 
+
+After you have done that run:
+
+    ruby main.rb
+
+And browse to localhost:4567. Here you will find more information regarding how files are organized within the project.
+
+### Main Features
+
+* Rake tasks to automatically update JQuery and Twitter Bootstrap (if you don't wish to use these, there is a task to remove them)
+* Helpers for partials, flash messages and detecting mobile devices
+* Sass/Scss, with a rake task to automatically compile a minified version of your stylesheets.
+* Datamapper (see Gemfile and main.rb for instructions on deploying to Heroku)
+* Minitest (the rake task will still work if you choose to use TestUnit)
+
+
+### Planned Improvements
+
+* Modernizr
+* Rake stats task
+* Replace JQuery Mobile with responsive Bootstrap layouts
+* Lots more still under consideration
+
+### Issues & Feedback
+
+If you have any problems or you're using this for something let me know!
