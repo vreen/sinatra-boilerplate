@@ -15,9 +15,9 @@ Dir["./app/controllers/*.rb"].each { |file| require file }
 
 before "/*" do 
   if mobile_request?
-    set :erb, :layout => :mobile
+    set :haml, :layout => :mobile
   else
-    set :erb, :layout => :layout
+    set :haml, :layout => :layout
   end
 end
 

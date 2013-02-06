@@ -1,0 +1,87 @@
+%blockquote
+  %p
+    The purpose of this boilerplate project is to enable Sinatra developers to get a project
+    up and running as fast as possible whilst providing some commonly used libraries to
+    make their app render correctly on the most popular browsers, work on mobile devices and
+    be dynamic with AJAX
+  %small 
+    Robert Ziehl
+.container
+  .span4.alert.alert-info
+    %h3 Project Organization
+    %p The project is structured like so:
+    %pre
+      :preserve          
+        - app
+          - controllers
+          - helpers
+          - models
+        - public
+          - css
+          - images
+          - js
+        - sass
+        - tests
+        - views
+          - layouts
+          - pages
+          - partials
+        config.ru
+        Gemfile
+        Rakefile
+        main.rb
+  .span6.alert.alert-info
+    %h3 Included Libraries
+    %p Bundled with this project is:
+    %pre
+      :preserve
+        Twitter Bootstrap 2.2.2
+        JQuery 1.9.1
+        JQuery Mobile 1.2.0
+    %h3 Explained
+    %p What every directory is for:
+    %dl
+      %dt app/controllers
+      %dd
+        Any code that looks like
+        %code get "/post/new" do ... end
+        goes in here
+      %br/
+      %dt app/helpers
+      %dd Helper functions get placed here
+      %br/
+      %dt app/models
+      %dd
+        Class definitions that have
+        %code include DataMapper::Resource
+        go here
+      %br/
+      %dt public/css
+      %dd All stylesheets go here
+      %br/
+      %dt public/images
+      %dd Picture files go here
+      %br/
+      %dt public/js
+      %dd Javascript files go here
+      %br/
+      %dt sass
+      %dd
+        Put all
+        %code .scss
+        files here. Compile with
+        %code rake sass
+      %br/
+      %dt tests
+      %dd
+        Put unit tests/specs here. Run them with
+        %code rake
+      %br/
+      %dt views/layouts
+      %dd Put page templates here
+      %br/
+      %dt views/pages
+      %dd Put actual page content in here
+      %br/
+      %dt views/partials
+      %dd DRY! Put reusable view snippets in here

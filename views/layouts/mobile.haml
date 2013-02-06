@@ -1,0 +1,19 @@
+!!! 5
+%html{:lang => 'en'}
+  %head
+    %meta{:charset => 'utf-8'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1'}
+    %meta{:name => 'format-detection', :content => 'telephone=no'}
+    %title= 'My Mobile App'
+    %link{:rel => 'stylesheet', :href => 'http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css'}
+    %script{:src => 'http://code.jquery.com/jquery-1.6.2.min.js'}
+    %script{:src => 'http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js'}
+  %body
+    %div{:id => 'mobile_page_id', :data => {:role => 'page', :title => "#{render_partial :title}"}}
+
+      %div{:data => {:role => 'header'}}
+        %h1= render_partial :title
+      %div{:data => {:role => 'content'}}
+        =yield
+      %div{:data => {:role => 'footer'}}
+        %h4= render_partial :footer

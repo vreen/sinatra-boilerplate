@@ -1,0 +1,14 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+      %title= render_partial :title
+      %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet"}
+        %link{:href => "/css/style.css", :rel => "stylesheet"}
+  %body
+    .container
+      .row
+        %h1
+          = render_partial :title
+          %small Bootstrap your Sinatra Web Development
+        = yield

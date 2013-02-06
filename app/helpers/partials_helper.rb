@@ -3,6 +3,6 @@
 #call with <%= partial :partial_name %>
 helpers do
   def render_partial(template)
-    erb template, :layout => false
+    haml template, :layout => false
   end
 end
